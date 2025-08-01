@@ -16,7 +16,7 @@ export class CalculatorComponent {
       this.display = this.display.slice(0, -1);
     } else if (value === '=') {
       try {
-        this.display = Function(`return ${this.display}`)().toString();
+        this.display = Function(`return ${this.display.replace(/%/g, '/100')}`)().toString();
       } catch {
         this.display = 'Error';
       }
