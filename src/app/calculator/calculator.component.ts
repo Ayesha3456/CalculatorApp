@@ -8,19 +8,27 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
   display = '';
+  justEvaluated = false;
 
   onClick(value: string): void {
     if (value === 'C') {
       this.display = '';
+      this.justEvaluated = false;
     } else if (value === '←') {
       this.display = this.display.slice(0, -1);
     } else if (value === '=') {
       try {
-        this.display = Function(`return ${this.display.replace(/%/g, '/100')}`)().toString();
+        const expression = this.display.replace(/%/g, '/100');
+        this.display = Function(`return ${expression}`)().toString();
       } catch {
         this.display = 'Error';
       }
+      this.justEvaluated = true;
     } else {
+      if (this.justEvaluated && !['+', '-', '*', '/', '%'].includes(value)) {
+        this.display = '';
+      }
+      this.justEvaluated = false;
       this.display += value;
     }
   }
