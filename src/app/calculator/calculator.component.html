@@ -1,0 +1,45 @@
+<div class="container d-flex justify-content-center align-items-center vh-95">
+    <div class="card p-4 shadow-lg" style="width: 320px;">
+      <input type="text" class="form-control text-end mb-3" [value]="display" readonly />
+  
+      <!-- First Row -->
+      <div class="row g-2 mb-1">
+        <div class="col-3"><button class="btn btn-danger w-100 animate-click" (click)="onClick('C')">C</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 animate-click" (click)="onClick('←')">←</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 animate-click" (click)="onClick('%')">%</button></div>
+        <div class="col-3"><button class="btn btn-primary w-100 animate-click" (click)="onClick('/')">/</button></div>
+      </div>
+  
+      <!-- Second Row -->
+      <div class="row g-2 mb-1">
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('7')">7</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('8')">8</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('9')">9</button></div>
+        <div class="col-3"><button class="btn btn-primary w-100 animate-click" (click)="onClick('*')">*</button></div>
+      </div>
+  
+      <!-- Third Row -->
+      <div class="row g-2 mb-1">
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('4')">4</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('5')">5</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('6')">6</button></div>
+        <div class="col-3"><button class="btn btn-primary w-100 animate-click" (click)="onClick('-')">-</button></div>
+      </div>
+  
+      <!-- Fourth Row -->
+      <div class="row g-2 mb-1">
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('1')">1</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('2')">2</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('3')">3</button></div>
+        <div class="col-3"><button class="btn btn-primary w-100 animate-click" (click)="onClick('+')">+</button></div>
+      </div>
+  
+      <!-- Fifth Row -->
+      <div class="row g-2">
+        <div class="col-6"><button class="btn btn-light w-100 animate-click" (click)="onClick('0')">0</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 animate-click" (click)="onClick('.')">.</button></div>
+        <div class="col-3"><button class="btn btn-success w-100 animate-click" (click)="onClick('=')">=</button></div>
+      </div>
+    </div>
+  </div>
+  
